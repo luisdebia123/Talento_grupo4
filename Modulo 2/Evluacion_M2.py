@@ -49,3 +49,28 @@ num = int(input("Ingrese un numero de hasta 6 digitos: "))
 numero_a_diccionario(num)
 graficar()
 print("fin")
+
+# Convierte el número a string
+s_numero = str(num)
+c_numero = len (s_numero)
+agregar_punto = []
+archiva_numero =[]
+contar = 0
+# el número en string es leido uno a uno y se inserta un punto
+for i in s_numero :
+    if contar==3 or contar==6 :
+        agregar_punto.append(i)
+        agregar_punto.insert(c_numero-3,".")
+        contar = contar+1
+    else : 
+        agregar_punto.append(i)
+        contar = contar+1
+# se imprime el número en miles
+print ()
+print ("Número Ingresado")
+print ("----------------")
+for i in range(len(agregar_punto)):
+    agregar_punto[i] = str(agregar_punto[i])
+    b= agregar_punto[i]
+    archiva_numero=b + b
+    print (b, end="") 
